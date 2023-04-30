@@ -1,0 +1,100 @@
+{
+    "name": "1-Click Email URL",
+    "source": "Local",
+    "extracted": "D:/ProgramD/MyCode/CS5331 Project/attemp1/extract/temp_extract_directory",
+    "type": "Local Firefox Extension",
+    "manifest": {
+        "manifest_version": 2,
+        "name": "1-Click Email URL",
+        "version": "1.0.4",
+        "description": "Click to email any URL with one click",
+        "browser_action": {
+            "default_icon": "icon.png"
+        },
+        "icons": {
+            "16": "icon16.png",
+            "48": "icon48.png",
+            "128": "icon128.png"
+        },
+        "background": {
+            "scripts": [
+                "background.js"
+            ]
+        },
+        "permissions": [
+            "tabs"
+        ]
+    },
+    "version": "1.0.4",
+    "permissions": [
+        {
+            "name": "tabs",
+            "description": "Grants the extension access to privileged fields of the Tab objects used by several APIs including chrome.tabs and chrome.windows. In many circumstances the extension will not need to declare the tabs permission to make use of these APIs.",
+            "badge": "<i class=\"fas fa-th\"></i>",
+            "risk": "high",
+            "warning": "Read your browsing history"
+        }
+    ],
+    "urls": [
+        {
+            "file": "background.js",
+            "url": "https://www.send-an-email.com/send/?message=%3Ca%20href%3D%22",
+            "domain": "send-an-email.com"
+        }
+    ],
+    "emails": [],
+    "bitcoin_addresses": [],
+    "ipv4_addresses": [],
+    "ipv6_addresses": [],
+    "base64_strings": [],
+    "comments": [
+        {
+            "comment": "www.send-an-email.com/send/?message=%3Ca%20href%3D%22&quot; + urlClean + &quot;%22%3E&quot; + urlClean + &quot;%3C%2Fa%3E&quot; + &#39;&amp;b=1&#39;;",
+            "file": "background.js"
+        }
+    ],
+    "domains": [
+        "send-an-email.com"
+    ],
+    "files": {
+        "html": [],
+        "json": [
+            {
+                "manifest.json": "manifest.json"
+            }
+        ],
+        "js": [
+            {
+                "background.js": "background.js"
+            }
+        ],
+        "css": [],
+        "static": [
+            {
+                "icon.png": "icon.png"
+            },
+            {
+                "icon128.png": "icon128.png"
+            },
+            {
+                "icon16.png": "icon16.png"
+            },
+            {
+                "icon48.png": "icon48.png"
+            }
+        ],
+        "other": [
+            {
+                "manifest.mf": "META-INF\\manifest.mf"
+            },
+            {
+                "mozilla.rsa": "META-INF\\mozilla.rsa"
+            },
+            {
+                "mozilla.sf": "META-INF\\mozilla.sf"
+            }
+        ]
+    },
+    "author": "unknown",
+    "description": "Click to email any URL with one click"
+}
